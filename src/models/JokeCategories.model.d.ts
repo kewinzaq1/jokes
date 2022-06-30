@@ -1,4 +1,4 @@
-export type categories =
+export type JokeCategoriesModel =
   | 'animal'
   | 'career'
   | 'celebrity'

@@ -1,4 +1,4 @@
-export type Joke = {
+export type JokeModel = {
   created_at: string
   icon_url: string
   id: string
