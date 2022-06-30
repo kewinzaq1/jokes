@@ -39,7 +39,7 @@ export const CategorySelect = () => {
       <InputLabel id="category-select-label">Category</InputLabel>
       <Select
         labelId="category-select"
-        id="category=select"
+        id="category-select"
         value={currentCategory}
         label="Category"
         onChange={handleChangeCategory}

@@ -12,6 +12,7 @@ export const JokeModel = () => {
     <div>
       {joke && (
         <Button
+          id={'display-joke-button'}
           onClick={handleOpen}
           variant={'contained'}
           style={{marginTop: 10}}
@@ -39,7 +40,12 @@ export const JokeModel = () => {
             borderRadius: '.25rem'
           }}
         >
-          <Typography id="joke-modal-title" variant="h6" component="h2">
+          <Typography
+            id="joke-modal-title"
+            variant="h6"
+            component="p"
+            data-testid={'joke-modal-title'}
+          >
             {joke?.value}
           </Typography>
         </Paper>

@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {CategorySelect} from './components/CategorySelect'
+import {JokeModel} from './components/JokeModal'
+import {Box, Typography} from '@mui/material'
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Box
+      component={'main'}
+      sx={{
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: '400px',
+        margin: 'auto'
+      }}
+    >
+      <Typography variant={'h3'} component={'h1'}>
+        Jokes
+      </Typography>
+      <Typography variant={'h6'} component={'h2'} marginBottom={5}>
+        Choose category and display random joke
+      </Typography>
+      <CategorySelect />
+      <JokeModel />
+    </Box>
+  )
 }
-
-export default App;
